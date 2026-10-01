@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://makumbatechhub.vercel.app/sitemap.xml
