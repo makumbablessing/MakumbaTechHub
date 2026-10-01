@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MAKUMBATECH HUB | IT Support, Web Development, Power BI &amp; Digital Design in Nairobi</title>
+<meta name="description" content="MakumbaTech Hub by Blessing Makumba: affordable IT support, web development, Power BI dashboards and digital design for individuals, students, schools and small businesses in Nairobi, Kenya.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0716;--tx:#e8ecff;--mu:#9aa3c7;--gl:rgba(255,255,255,.06);--bd:rgba(255,255,255,.14);--c:#ff8fd8;--b:#c084fc;--v:#ffc2a1;--g:linear-gradient(120deg,#ff6ec7,#c084fc 45%,#ffd1a9 75%,#ff6ec7);--gs:200% 100%;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#fdf0fa;--tx:#10142b;--mu:#4b5478;--gl:rgba(255,255,255,.65);--bd:rgba(30,40,90,.15)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fdf0fa;--tx:#10142b;--mu:#4b5478;--gl:rgba(255,255,255,.65);--bd:rgba(30,40,90,.15)}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;height:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.logo{font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit;text-decoration:none}
+.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(600px 400px at 85% 10%,rgba(255,110,199,.28),transparent),radial-gradient(500px 400px at 5% 40%,rgba(192,132,252,.22),transparent),radial-gradient(600px 500px at 60% 95%,rgba(255,194,161,.16),transparent),var(--bg)}
+.bg::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);background-size:56px 56px;opacity:.35;mask-image:radial-gradient(ellipse at center,#000 20%,transparent 75%);animation:drift 30s linear infinite}
+@keyframes shine{to{background-position:200% 0}}@keyframes drift{to{background-position:56px 56px}}
+canvas#p{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.wrap{width:min(1120px,100% - 40px);margin:auto}
+section{padding:84px 0}
+.glass{background:var(--gl);border:1px solid var(--bd);border-radius:22px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 10px 40px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.08)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;margin:10px auto 0;width:min(1120px,100% - 24px);padding:10px 14px 10px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:700;letter-spacing:.06em;font-size:1rem}.logo span{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.links{display:flex;gap:22px;align-items:center}.links a{color:var(--mu);font-size:.93rem;transition:.2s}.links a:hover{color:var(--tx)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;font-weight:500;border:1px solid var(--bd);cursor:pointer;transition:.25s;font:500 .95rem Inter,sans-serif;color:var(--tx);background:var(--gl)}
+.btn:hover{transform:translateY(-2px);border-color:var(--c)}
+.btn.pr{background:var(--g);background-size:var(--gs);animation:shine 6s linear infinite;color:#fff;border:0;box-shadow:0 8px 28px rgba(255,110,199,.45)}.btn.pr:hover{box-shadow:0 10px 36px rgba(192,132,252,.6)}
+.btn.sm{padding:9px 18px}
+.burger{display:none;background:none;border:1px solid var(--bd);border-radius:12px;width:44px;height:44px;color:var(--tx);cursor:pointer;font-size:1.2rem}
+a:focus-visible,button:focus-visible{outline:2px solid var(--c);outline-offset:3px}
+.hero{padding:70px 0 90px}.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.eyebrow{color:var(--c);letter-spacing:.2em;font-size:.78rem;text-transform:uppercase;font-weight:500}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);margin:14px 0}h1 em{font-style:normal;background:var(--g);background-size:var(--gs);animation:shine 5s linear infinite;-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-family:'Space Grotesk';font-size:1.25rem;color:var(--tx)}.lead{color:var(--mu);max-width:520px;margin:14px 0 22px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}.tags span{font-size:.72rem;letter-spacing:.12em;padding:6px 14px;border-radius:999px;border:1px solid var(--bd);background:var(--gl)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.screen{padding:16px;animation:float 7s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px)}}
+.dots{display:flex;gap:6px;margin-bottom:12px}.dots i{width:10px;height:10px;border-radius:50%;background:var(--bd)}
+.code{font:.8rem/1.7 ui-monospace,Consolas,monospace;color:var(--mu);background:rgba(0,0,0,.25);padding:14px;border-radius:14px;overflow:auto}
+.code b{color:var(--c);font-weight:500}.code u{color:var(--v);text-decoration:none}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.mini div{padding:12px;border-radius:14px;border:1px solid var(--bd);font-size:.75rem;color:var(--mu);text-align:center}.mini strong{display:block;color:var(--tx);font:700 1rem 'Space Grotesk'}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:10px 0 14px}.sub{color:var(--mu);max-width:620px}
+.head{margin-bottom:40px}
+.grid{display:grid;gap:20px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{padding:28px;transition:.3s}.card:hover{transform:translateY(-6px);border-color:rgba(255,143,216,.6);box-shadow:0 18px 50px rgba(255,110,199,.25)}
+.num{font:700 .85rem 'Space Grotesk';color:var(--c);letter-spacing:.15em}.card h3{font-size:1.25rem;margin:8px 0 12px}
+.card ul{margin:0 0 20px;padding-left:18px;color:var(--mu);font-size:.93rem}
+.about{grid-template-columns:1.2fr .8fr;gap:28px}.about p{color:var(--mu)}.info dt{font:500 .72rem Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin-top:14px}.info dd{margin:2px 0 0;font-size:.9rem;color:var(--mu)}.info dt:first-child{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.chips span{font-size:.75rem;padding:4px 11px;border-radius:999px;background:rgba(255,143,216,.14);border:1px solid rgba(255,143,216,.35)}
+.proj p{color:var(--mu);font-size:.92rem;margin:6px 0}.proj p b{color:var(--tx);font-weight:500}
+.status{font-size:.7rem;letter-spacing:.1em;color:var(--v);text-transform:uppercase}
+.bi{padding:28px}.biTop{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center}
+.demo{font-size:.72rem;padding:4px 12px;border-radius:999px;border:1px dashed var(--c);color:var(--c)}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}.kp div{padding:14px;border-radius:16px;border:1px solid var(--bd);background:rgba(0,0,0,.15)}.kp small{color:var(--mu);font-size:.72rem}.kp strong{display:block;font:700 1.35rem 'Space Grotesk'}.up{color:#4ade80;font-size:.72rem}
+.charts{display:grid;grid-template-columns:2fr 1fr;gap:14px}.ch{padding:16px;border-radius:16px;border:1px solid var(--bd);background:rgba(0,0,0,.15)}
+.bars{display:flex;align-items:flex-end;gap:10px;height:140px}.bars i{flex:1;background:var(--g);border-radius:6px 6px 0 0;height:var(--h);transform-origin:bottom;transform:scaleY(0);transition:transform 1s}.in .bars i{transform:scaleY(1)}
+.lbl{display:flex;gap:10px;font-size:.65rem;color:var(--mu);margin-top:6px}.lbl span{flex:1;text-align:center}
+.ring{width:110px;height:110px;border-radius:50%;margin:8px auto;background:conic-gradient(var(--c) 0 42%,var(--b) 0 72%,var(--v) 0 100%);-webkit-mask:radial-gradient(circle 34px,transparent 98%,#000);mask:radial-gradient(circle 34px,transparent 98%,#000)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.filters span{font-size:.72rem;padding:5px 12px;border-radius:999px;border:1px solid var(--bd);color:var(--mu)}
+.gal{grid-template-columns:repeat(3,1fr)}
+.poster{aspect-ratio:4/5;border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;border:1px solid var(--bd);transition:.35s}
+.poster:hover{transform:scale(1.03) rotate(-.6deg)}.poster::before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;filter:blur(40px);opacity:.7;top:-40px;right:-40px;background:var(--a)}
+.poster h3{position:relative;font-size:1.7rem}.poster p{position:relative;margin:4px 0 0;font-size:.82rem;opacity:.85}.poster small{position:relative;margin-top:12px;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;opacity:.7}
+.p1{background:linear-gradient(160deg,#3b0764,#be185d);--a:#fb7185}.p2{background:linear-gradient(160deg,#0c4a6e,#0e7490);--a:#fde047}.p3{background:linear-gradient(160deg,#1e1b4b,#4338ca);--a:#22d3ee}.p4{background:linear-gradient(160deg,#064e3b,#0f766e);--a:#a3e635}.p5{background:linear-gradient(160deg,#431407,#c2410c);--a:#fbbf24}.p6{background:linear-gradient(160deg,#172554,#7c3aed);--a:#f0abfc}
+.poster{color:#fff}
+.art{position:relative;flex:1;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px}
+.big{font:700 5.2rem/1 'Space Grotesk';text-shadow:0 6px 30px rgba(0,0,0,.35)}.big sup{font-size:2rem}
+.pill{background:#fff;color:#111;font:700 .8rem 'Space Grotesk';padding:6px 14px;border-radius:999px;letter-spacing:.1em}
+.cta{position:relative;align-self:flex-start;margin-top:14px;font:700 .75rem Inter;letter-spacing:.08em;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.95);color:#111}
+.date{background:#fff;color:#111;border-radius:16px;padding:12px 26px;text-align:center;font:700 3rem/1 'Space Grotesk'}.date small{display:block;font-size:.85rem;letter-spacing:.2em;color:#be185d}
+.ic{display:grid;gap:10px}.ic i{font-style:normal;width:150px;padding:9px 14px;border-radius:12px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);font:500 .85rem Inter}
+.cir{position:relative;width:150px;height:110px}.cir i{position:absolute;width:80px;height:80px;border-radius:50%;mix-blend-mode:screen;opacity:.85}.cir i:nth-child(1){left:0;top:0;background:#a3e635}.cir i:nth-child(2){left:44px;top:26px;background:#22d3ee}.cir i:nth-child(3){left:70px;top:0;background:#f472b6}
+.bot{width:64px;height:130px;border-radius:14px 14px 22px 22px;background:linear-gradient(160deg,#fff,#fde68a);position:relative;box-shadow:0 12px 30px rgba(0,0,0,.35);display:grid;place-items:center;color:#9a3412;font:700 .6rem Inter;letter-spacing:.1em}.bot::before{content:"";position:absolute;top:-18px;left:18px;width:28px;height:20px;border-radius:6px 6px 0 0;background:#fbbf24}
+.eq{display:flex;align-items:flex-end;gap:7px;height:110px}.eq i{width:14px;border-radius:6px;background:linear-gradient(#f0abfc,#fff)}
+
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}.steps::before{content:"";position:absolute;top:26px;left:8%;right:8%;height:2px;background:var(--g);opacity:.5}
+.step{text-align:center;position:relative}.step b{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;margin:0 auto 14px;font:700 1rem 'Space Grotesk';background:var(--bg);border:2px solid var(--c);box-shadow:0 0 20px rgba(255,143,216,.5)}.step h3{font-size:1rem}
+.contact{padding:48px;text-align:center}.contact .row{justify-content:center;margin-top:24px}
+.det{color:var(--mu);margin-top:20px;font-size:.92rem}
+footer{margin:0 auto 20px;padding:36px 28px;text-align:center;width:min(1120px,100% - 24px)}footer p{margin:6px 0;color:var(--mu);font-size:.9rem}footer .row{justify-content:center;margin:14px 0}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media (max-width:900px){.hg,.about{grid-template-columns:1fr}.g3,.g4,.gal{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}.kp{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:760px){.burger{display:block}.links{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;flex-direction:column;padding:20px;gap:16px;background:var(--bg);border:1px solid var(--bd);border-radius:20px}.links.open{display:flex}.hire{display:none}
+.g2,.g3,.g4,.gal{grid-template-columns:1fr}.steps{grid-template-columns:1fr;gap:26px;padding-left:10px}.steps::before{top:0;bottom:0;left:36px;right:auto;width:2px;height:auto}.step{display:grid;grid-template-columns:54px 1fr;gap:16px;text-align:left;align-items:center}.step b{margin:0}.contact{padding:32px 20px}section{padding:60px 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.bars i{transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div><canvas id="p" aria-hidden="true"></canvas>
+<nav class="glass" aria-label="Main">
+<a href="#home" class="logo">MAKUMBATECH <span>HUB</span></a>
+<button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+<div class="links" id="menu"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+<a class="btn pr sm hire" href="#contact">Hire Me</a>
+</nav>
+
+<main>
+<section class="hero" id="home"><div class="wrap hg">
+<div class="rv">
+<div class="eyebrow">Nairobi, Kenya &bull; Blessing Makumba</div>
+<h1>MAKUMBATECH <em>HUB</em></h1>
+<div class="tag">Technology. Creativity. Digital Solutions.</div>
+<p class="lead">I provide practical IT support, web development, data solutions and creative digital services for individuals and businesses.</p>
+<div class="tags"><span>IT SUPPORT</span><span>WEB DEVELOPMENT</span><span>POWER BI</span><span>DIGITAL DESIGN</span></div>
+<div class="row"><a class="btn pr" href="#contact">Hire Me</a><a class="btn" href="#portfolio">View My Work</a></div>
+</div>
+<div class="glass screen rv" aria-hidden="true">
+<div class="dots"><i></i><i></i><i></i></div>
+<div class="code"><u>const</u> hub = {<br>&nbsp;&nbsp;owner: <b>"Blessing Makumba"</b>,<br>&nbsp;&nbsp;services: [<b>"IT"</b>, <b>"Web"</b>, <b>"Power BI"</b>, <b>"Design"</b>],<br>&nbsp;&nbsp;goal: <b>"practical, affordable solutions"</b><br>};</div>
+<div class="mini"><div><strong>&lt;/&gt;</strong>Web</div><div><strong>&#9638;</strong>Dashboards</div><div><strong>&#9881;</strong>IT Support</div></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="head rv"><div class="eyebrow">About</div><h2>Practical tech, built with care</h2></div>
+<div class="grid about rv" style="display:grid">
+<div class="glass card" style="transform:none">
+<p>I'm Blessing Makumba, the founder of MakumbaTech Hub in Nairobi, with hands-on IT support and software development experience gained at Astral Aviation.</p>
+<p>My work has included troubleshooting laptops and printers, supporting users, registering staff into a biometric attendance system, helping restore a faulty Ethernet connection, and building full-stack applications with PHP, Python/Flask and MySQL. I also design flyers and build Power BI practice dashboards.</p>
+<p>MakumbaTech Hub is where I bring that experience to individuals, students, entrepreneurs, schools and small businesses, with clear communication and fair pricing.</p>
+</div>
+<div class="glass card info" style="transform:none"><dl style="margin:0">
+<dt>Based in</dt><dd>Nairobi, Kenya. Remote and on-site work</dd><dt>Experience</dt><dd>Practical IT support and full-stack development at Astral Aviation (2026)</dd><dt>What I do</dt><dd>IT support, websites, Power BI dashboards, graphic design, digital solutions</dd><dt>Tools</dt><dd>HTML, CSS, JavaScript, PHP, Python/Flask, React, MySQL, Power BI</dd><dt>Languages</dt><dd>English and Kiswahili</dd></dl></div>
+</div></div></section>
+
+<section id="services"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Services</div><h2>How I can help</h2><p class="sub">Affordable digital services for individuals, students, entrepreneurs, schools and small businesses.</p></div>
+<div class="grid g3">
+<article class="glass card rv"><div class="num">01</div><h3>IT Support</h3><ul><li>Computer and Windows troubleshooting</li><li>Laptop setup and maintenance</li><li>Hardware troubleshooting</li><li>Printer installation and configuration</li><li>Basic networking and Wi-Fi/connectivity checks</li><li>Software installation and general support</li></ul><a class="btn pr sm" href="#contact" data-s="IT support">Get IT Support</a></article>
+<article class="glass card rv"><div class="num">02</div><h3>Web Development</h3><ul><li>Business and school websites</li><li>Landing pages and personal portfolios</li><li>Responsive websites (HTML, CSS, JavaScript, PHP, React)</li><li>Website maintenance</li><li>Basic hosting and deployment assistance</li></ul><a class="btn pr sm" href="#contact" data-s="a website">Build My Website</a></article>
+<article class="glass card rv"><div class="num">03</div><h3>Power BI &amp; Data</h3><ul><li>Power BI dashboards and interactive reports</li><li>Data visualization and KPI dashboards</li><li>Excel data preparation and cleaning</li><li>Business reporting</li></ul><p style="color:var(--mu);font-size:.88rem;margin-top:-6px">Dashboards help you understand your data more clearly.</p><a class="btn pr sm" href="#contact" data-s="a Power BI dashboard">Request a Dashboard</a></article>
+<article class="glass card rv"><div class="num">04</div><h3>Graphic Design &amp; Promotions</h3><ul><li>Promotional and event posters</li><li>Social media graphics and ad creatives</li><li>Business adverts and sale graphics</li><li>School promotional materials</li><li>Digital flyers and WhatsApp designs</li></ul><a class="btn pr sm" href="#contact" data-s="a design">Create My Design</a></article>
+<article class="glass card rv"><div class="num">05</div><h3>Digital Solutions</h3><ul><li>Digital document formatting</li><li>Excel assistance and data entry</li><li>Basic digital setup</li><li>Website content assistance</li><li>Other small-business digital help</li></ul><a class="btn pr sm" href="#contact" data-s="digital solutions">Let's Work Together</a></article>
+</div></div></section>
+
+<section id="portfolio"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Portfolio</div><h2>Selected projects</h2><p class="sub">Two projects were built during my internship at Astral Aviation and are internal systems, so there is no public link. More of my code is on GitHub.</p></div>
+<div class="grid g2">
+<article class="glass card proj rv"><span class="status">Astral Aviation internship</span><h3>Certificate Management &amp; Verification System</h3><div class="chips"><span>PHP</span><span>Python/Flask</span><span>MySQL</span><span>QR codes</span></div><p><b>Problem solved:</b> Managing trainees, courses and certificates by hand is slow and hard to verify.</p><p>A full-stack system with unique serial numbers, QR-code verification, automated PDF certificates, role-based access control, hardened security and a responsive admin panel.</p><a class="btn sm" href="https://github.com/makumbablessing" target="_blank" rel="noopener">GitHub Profile</a></article>
+<article class="glass card proj rv"><span class="status">Astral Aviation internship</span><h3>Astral Loadability: Aircraft Load Planning Tool</h3><div class="chips"><span>Python</span><span>Tkinter</span><span>pandas</span><span>NumPy</span><span>Matplotlib</span></div><p><b>Problem solved:</b> Planning cargo loads within weight limits and dangerous-goods rules.</p><p>A desktop app for B737-400F, B767-200SF and B767-300BDSF freighters with a ULD database, bin-packing placement, 3D and layer-by-layer views, door-fit checks and a ULD recommendation engine.</p><a class="btn sm" href="https://github.com/makumbablessing" target="_blank" rel="noopener">GitHub Profile</a></article>
+<article class="glass card proj rv"><span class="status">Featured project</span><h3>MindTrack: Student Wellness Dashboard</h3><div class="chips"><span>JavaScript</span><span>Anthropic API</span></div><p><b>Problem solved:</b> Helping students track mood and stress patterns.</p><p>A wellness dashboard with an AI-powered stress analysis feature and secure API key handling for safe public sharing.</p><a class="btn sm" href="https://github.com/makumbablessing" target="_blank" rel="noopener">GitHub Profile</a></article>
+<article class="glass card proj rv"><span class="status">Personal project</span><h3>Fin-Track: Finance Tracker</h3><div class="chips"><span>JavaScript</span><span>Chart.js</span><span>Local Storage</span></div><p><b>Problem solved:</b> Seeing where your money goes.</p><p>A responsive app for income and expense tracking, category analysis and charts.</p><a class="btn sm" href="https://github.com/makumbablessing" target="_blank" rel="noopener">GitHub Profile</a></article>
+<article class="glass card proj rv"><span class="status">Personal project</span><h3>Skye: Weather Dashboard</h3><div class="chips"><span>JavaScript</span><span>Open-Meteo API</span></div><p><b>Problem solved:</b> Quick, clear weather planning.</p><p>A responsive dashboard with hourly and seven-day forecasts and Celsius/Fahrenheit conversion.</p><a class="btn sm" href="https://github.com/makumbablessing" target="_blank" rel="noopener">GitHub Profile</a></article>
+</div></div></section>
+
+<section id="powerbi"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Power BI Showcase</div><h2>Data you can actually read</h2></div>
+<div class="glass bi rv" id="bi">
+<div class="biTop"><strong class="tag">Sales Overview</strong><span class="demo">Demo / sample data, not real results</span></div>
+<div class="kp"><div><small>Revenue</small><strong>$128K</strong><span class="up">&#9650; sample</span></div><div><small>Orders</small><strong>1,420</strong><span class="up">&#9650; sample</span></div><div><small>Conversion</small><strong>3.8%</strong><span class="up">&#9650; sample</span></div><div><small>Target met</small><strong>92%</strong><span class="up">&#9650; sample</span></div></div>
+<div class="charts"><div class="ch"><small>Monthly revenue (sample)</small><div class="bars" role="img" aria-label="Sample bar chart"><i style="--h:40%"></i><i style="--h:55%"></i><i style="--h:48%"></i><i style="--h:72%"></i><i style="--h:65%"></i><i style="--h:90%"></i></div><div class="lbl"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div></div>
+<div class="ch"><small>Category split (sample)</small><div class="ring" role="img" aria-label="Sample donut chart"></div></div></div>
+<div class="filters"><span>Region: All</span><span>Year: 2026</span><span>Category: All</span></div>
+</div>
+<div class="contact glass rv" style="margin-top:24px;padding:32px"><h3 class="tag">Need your business data turned into an interactive dashboard?</h3><div class="row"><a class="btn pr" href="#contact" data-s="a Power BI dashboard">Request a Power BI Dashboard</a></div></div>
+</div></section>
+
+<section id="design"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Creative Design</div><h2>Promotional design concepts</h2><p class="sub">Concept designs with fictional brands, showing the style I can create for your business.</p></div>
+<div class="grid gal">
+<div class="poster p1 rv"><div class="art" aria-hidden="true"><b class="big">50<sup>%</sup></b><span class="pill">OFF</span></div><h3>Mega Sale</h3><p>Up to 50% off this weekend</p><span class="cta">SHOP NOW</span><small>Concept: sale promotion</small></div>
+<div class="poster p2 rv"><div class="art" aria-hidden="true"><div class="date"><small>NOV</small>12</div></div><h3>Open Day 2026</h3><p>Meet our teachers. Tour our school.</p><span class="cta">JOIN US</span><small>Concept: school event</small></div>
+<div class="poster p3 rv"><div class="art" aria-hidden="true"><div class="ic"><i>&lt;/&gt; Websites</i><i>&#9638; Dashboards</i><i>&#9881; IT Support</i></div></div><h3>Fix. Build. Grow.</h3><p>Your local tech partner</p><span class="cta">GET STARTED</span><small>Concept: business advert</small></div>
+<div class="poster p4 rv"><div class="art" aria-hidden="true"><div class="cir"><i></i><i></i><i></i></div></div><h3>#FreshStart</h3><p>New season, new look</p><span class="cta">FOLLOW US</span><small>Concept: social campaign</small></div>
+<div class="poster p5 rv"><div class="art" aria-hidden="true"><div class="bot">GLOW</div></div><h3>Glow Serum</h3><p>Now available in store</p><span class="cta">ORDER NOW</span><small>Concept: product promotion</small></div>
+<div class="poster p6 rv"><div class="art" aria-hidden="true"><div class="eq"><i style="height:45%"></i><i style="height:80%"></i><i style="height:60%"></i><i style="height:100%"></i><i style="height:70%"></i><i style="height:50%"></i></div></div><h3>Youth Tech Night</h3><p>Saturday &bull; Nairobi</p><span class="cta">RESERVE A SPOT</span><small>Concept: event poster</small></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Why Me</div><h2>Why MakumbaTech Hub</h2></div>
+<div class="grid g4">
+<div class="glass card rv"><h3>Practical</h3><p style="color:var(--mu)">Solutions designed around the actual problem.</p></div>
+<div class="glass card rv"><h3>Affordable</h3><p style="color:var(--mu)">Digital services suitable for individuals and small businesses.</p></div>
+<div class="glass card rv"><h3>Creative</h3><p style="color:var(--mu)">Technology combined with modern visual design.</p></div>
+<div class="glass card rv"><h3>Reliable</h3><p style="color:var(--mu)">Professional communication and support.</p></div>
+</div>
+<div class="glass card rv" style="margin-top:20px;transform:none"><div class="eyebrow">Toolbox</div><div class="chips"><span>Windows troubleshooting</span><span>Printer configuration</span><span>Networking basics</span><span>CCNA fundamentals</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>Python/Flask</span><span>React</span><span>Node.js/Express</span><span>REST APIs</span><span>MySQL</span><span>Git &amp; GitHub</span><span>Chart.js</span><span>Power BI</span><span>ReportLab</span></div></div>
+</div></section>
+
+<section id="process"><div class="wrap">
+<div class="head rv"><div class="eyebrow">Process</div><h2>Simple from start to finish</h2></div>
+<div class="steps rv">
+<div class="step"><b>01</b><h3>Tell Me What You Need</h3></div>
+<div class="step"><b>02</b><h3>We Discuss the Solution</h3></div>
+<div class="step"><b>03</b><h3>I Build / Fix / Design</h3></div>
+<div class="step"><b>04</b><h3>You Receive the Finished Solution</h3></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="glass contact rv">
+<div class="eyebrow">Contact</div><h2>Have a project in mind?</h2>
+<p class="sub" style="margin:auto">Whether you need technical support, a website, a Power BI dashboard, or promotional content, let's discuss what you need.</p>
+<div class="row"><a class="btn pr" id="wa" href="https://wa.me/254703660138?text=Hello%20Blessing%2C%20I%20found%20MakumbaTech%20Hub%20and%20I'd%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener">WhatsApp Me</a><a class="btn em" href="mailto:makumbablessing516@gmail.com?subject=MakumbaTech%20Hub%20enquiry" target="_blank" rel="noopener">Email Me</a><a class="btn" href="https://github.com/makumbablessing" target="_blank" rel="noopener">GitHub</a></div>
+<p class="det">+254 703 660 138 &bull; makumbablessing516@gmail.com &bull; Nairobi, Kenya</p>
+</div></div></section>
+</main>
+
+<footer class="glass">
+<div class="logo">MAKUMBATECH <span>HUB</span></div>
+<p>Technology. Creativity. Digital Solutions.</p>
+<p>IT Support &bull; Web Development &bull; Power BI &bull; Digital Design</p>
+<div class="row"><a class="btn sm" href="https://wa.me/254703660138" target="_blank" rel="noopener">WhatsApp</a><a class="btn sm em" href="mailto:makumbablessing516@gmail.com?subject=MakumbaTech%20Hub%20enquiry" target="_blank" rel="noopener">Email</a><a class="btn sm" href="https://github.com/makumbablessing" target="_blank" rel="noopener">GitHub</a></div>
+<p>&copy; 2026 MakumbaTech Hub. All rights reserved.</p>
+</footer>
+
+<script>
+const m=document.getElementById('menu'),b=document.querySelector('.burger');
+b.onclick=()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)};
+m.querySelectorAll('a').forEach(a=>a.onclick=()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+document.querySelectorAll('[data-s]').forEach(a=>a.addEventListener('click',()=>{
+const w=document.getElementById('wa');w.href='https://wa.me/254703660138?text='+encodeURIComponent("Hello Blessing, I found MakumbaTech Hub and I'd like to enquire about "+a.dataset.s+".")}));
+document.querySelectorAll('.em').forEach(a=>a.addEventListener('click',e=>{
+if(/Android|iPhone|iPad|Mobi/i.test(navigator.userAgent))return;
+e.preventDefault();window.open('https://mail.google.com/mail/?view=cm&fs=1&to=makumbablessing516@gmail.com&su='+encodeURIComponent('MakumbaTech Hub enquiry')+'&body='+encodeURIComponent("Hello Blessing,\n\nI found MakumbaTech Hub and I'd like to enquire about your services.\n"),'_blank','noopener')}));
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
+const c=document.getElementById('p'),x=c.getContext('2d');let w,h,P=[];
+const r=()=>{w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:Math.min(60,w/22|0)},()=>({x:Math.random()*w,y:Math.random()*h,v:.1+Math.random()*.3,s:Math.random()*2+.8,t:Math.random()*6,g:Math.random()<.4}))};
+r();addEventListener('resize',r);
+(function f(){x.clearRect(0,0,w,h);P.forEach(p=>{p.y-=p.v;p.t+=.04;if(p.y<0){p.y=h;p.x=Math.random()*w}const a=.35+.45*Math.abs(Math.sin(p.t));x.fillStyle=p.g?'rgba(255,214,170,'+a+')':'rgba(255,143,216,'+a+')';if(p.s>1.8){x.save();x.translate(p.x,p.y);x.beginPath();for(let i=0;i<8;i++){const r=i%2?p.s*.5:p.s*2.2,t=i*Math.PI/4;x.lineTo(Math.cos(t)*r,Math.sin(t)*r)}x.fill();x.restore()}else{x.beginPath();x.arc(p.x,p.y,p.s,0,7);x.fill()}});requestAnimationFrame(f)})();
+}
+</script>
+</body>
+</html>
